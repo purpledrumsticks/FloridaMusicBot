@@ -49,7 +49,7 @@ setInterval(retweet, 60000 * 10);
 var favoriteTweet = function () {
 
   var params = {
-    q: '%40floridacomeup OR %23FloridaHipHop OR %235MMA OR %23floridarap OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
+    q: '%23FloridaHipHop OR %40floridacomeup OR %23floridarap OR %235MMA OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
     result_type: 'mixed OR recent OR popular',
     lang: 'en'
   }
