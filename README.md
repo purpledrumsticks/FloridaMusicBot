@@ -1,1 +1,1 @@
-This project can be view here: @FloridaMusicBot
+This project can be view here: https://twitter.com/FloridaMusicBot
