@@ -1,5 +1,7 @@
 var twit = require('twit');
+var express = require('express');
 var config = require('./config.js');
+var app = express();
 
 var Twitter = new twit(config);
 
@@ -79,3 +81,7 @@ var favoriteTweet = function () {
 
 favoriteTweet();
 setInterval(favoriteTweet, 60000 * 15);
+
+app.listen(process.env.PORT || 5000, function () {
+  console.log('Florida Music Bot is listening on port 5000');
+})
