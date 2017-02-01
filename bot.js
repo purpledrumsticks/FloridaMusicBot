@@ -12,6 +12,7 @@ var ranDom = function (arr) {
 var retweet = function () {
   var params = {
     q: '@floridacomeup OR #FloridaHipHop OR #5MMA OR #floridarap OR #mieuxfl OR @MIEUX_FL OR @CitrusRap',
+    result_type: 'mixed', 'recent', 'popular',
     lang: 'en'
   }
 
@@ -47,6 +48,7 @@ var favoriteTweet = function () {
 
   var params = {
     q: '@floridacomeup OR #FloridaHipHop OR #5MMA OR #floridarap OR #mieuxfl OR @MIEUX_FL OR @CitrusRap',
+    result_type: 'mixed', 'recent', 'popular'
     lang: 'en'
   }
 
