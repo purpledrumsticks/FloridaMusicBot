@@ -13,7 +13,7 @@ var ranDom = function (arr) {
 //retweet a random tweet
 var retweet = function () {
   var params = {
-    q: '@floridacomeup OR #FloridaHipHop OR #5MMA OR #floridarap OR #mieuxfl OR @MIEUX_FL OR @CitrusRap',
+    q: '%40floridacomeup OR %23FloridaHipHop OR %235MMA OR %23floridarap OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
     result_type: 'mixed OR recent OR popular',
     lang: 'en'
   }
@@ -49,7 +49,7 @@ setInterval(retweet, 60000 * 10);
 var favoriteTweet = function () {
 
   var params = {
-    q: '@floridacomeup OR #FloridaHipHop OR #5MMA OR #floridarap OR #mieuxfl OR @MIEUX_FL OR @CitrusRap',
+    q: '%40floridacomeup OR %23FloridaHipHop OR %235MMA OR %23floridarap OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
     result_type: 'mixed OR recent OR popular',
     lang: 'en'
   }
