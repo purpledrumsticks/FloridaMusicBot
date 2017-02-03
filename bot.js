@@ -43,7 +43,7 @@ var retweet = function () {
 }
 
 retweet();
-setInterval(retweet, 60000 * 10);
+setInterval(retweet, 60000 * 60);
 
 //favorite a random tweet
 var favoriteTweet = function () {
@@ -80,7 +80,7 @@ var favoriteTweet = function () {
 
 
 favoriteTweet();
-setInterval(favoriteTweet, 60000 * 15);
+setInterval(favoriteTweet, 60000 * 60);
 
 app.listen(process.env.PORT || 5000, function () {
   console.log('Florida Music Bot is listening on port 5000');
