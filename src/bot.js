@@ -88,5 +88,5 @@ app.listen(process.env.PORT || 5000, function () {
 })
 
 setInterval(() => {
-  http.get("https://florida-music-bot.herokuapp.com");
+  http.get("http://florida-music-bot.herokuapp.com");
 }, 180000);
