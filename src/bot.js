@@ -1,18 +1,19 @@
-var express = require('express');
-var twit = require('twit');
-var config = require('./config.js');
-var app = express();
+let express = require('express');
+let twit = require('twit');
+let config = require('./config.js');
+let app = express();
+let http = require('http');
 
-var Twitter = new twit(config);
+let Twitter = new twit(config);
 
-var ranDom = function (arr) {
+const ranDom = function (arr) {
   var index = Math.floor(Math.random() * arr.length);
   return arr[index];
 }
 
 //retweet a random tweet
-var retweet = function () {
-  var params = {
+const retweet = function () {
+  let params = {
     q: '%40floridacomeup OR %23FloridaHipHop OR %235MMA OR %23floridarap OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
     result_type: 'mixed OR recent OR popular',
     lang: 'en'
@@ -20,8 +21,8 @@ var retweet = function () {
 
   Twitter.get('search/tweets', params, function (err,data) {
 
-    var tweet = data.statuses;
-    var randomTweet = ranDom(tweet);
+    let tweet = data.statuses;
+    let randomTweet = ranDom(tweet);
 
     if (typeof randomTweet !== 'undefined') {
       Twitter.post('statuses/retweet/:id', {
@@ -46,9 +47,9 @@ retweet();
 setInterval(retweet, 60000 * 60);
 
 //favorite a random tweet
-var favoriteTweet = function () {
+const favoriteTweet = function () {
 
-  var params = {
+  let params = {
     q: '%23FloridaHipHop OR %40floridacomeup OR %23floridarap OR %235MMA OR %23mieuxfl OR %40MIEUX_FL OR %40CitrusRap OR mieuxfl:media',
     result_type: 'mixed OR recent OR popular',
     lang: 'en'
@@ -56,8 +57,8 @@ var favoriteTweet = function () {
 
   Twitter.get('search/tweets', params, function (err, data) {
 
-    var tweet = data.statuses;
-    var randomTweet = ranDom(tweet);
+    let tweet = data.statuses;
+    let randomTweet = ranDom(tweet);
 
     if (typeof randomTweet !== 'undefined') {
       Twitter.post('favorites/create', {
@@ -85,3 +86,7 @@ setInterval(favoriteTweet, 60000 * 60);
 app.listen(process.env.PORT || 5000, function () {
   console.log('Florida Music Bot is listening on port 5000');
 })
+
+setInterval(() => {
+  http.get("https://florida-music-bot.herokuapp.com");
+}, 180000);
