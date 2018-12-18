@@ -1,7 +1,7 @@
 const config = require('../config.js');
 const twit = require('twit');
 const Twitter = new twit(config);
-const ranDom = require('./random.js');
+const ranDom = require('./ranDom.js');
 
 const favoriteTweet = function favoriteTweet () {
   const params = {
