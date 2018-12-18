@@ -29,3 +29,8 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# app specific env variables
+app-env
+
+devConfig.js
